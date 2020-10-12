@@ -2,32 +2,28 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import { StyleSheet, View, FlatList } from "react-native";
 import { Text, FAB, List } from "react-native-paper";
+import Fruit from "./Fruit";
 
-function ViewNotes({ navigation }) {
-  const [notes, setNotes] = useState([]);
+function ViewCards({ navigation }) {
+  const [cards, setCards] = useState([]);
 
-  const addNote = (note) => {
-    note.id = notes.length + 1;
-    setNotes([...notes, note]);
+  const addCard = (card) => {
+    card.id = cards.length + 1;
+    setCards([...cards, card]);
   };
   return (
     <>
-      <Header titleText="Simple Note Taker" />
+      <Header titleText="Fruits" navigation={navigation}/>
       <View style={styles.container}>
-        {notes.length === 0 ? (
+        {cards.length === 0 ? (
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>You do not have any notes</Text>
+            <Text style={styles.title}>no fruit</Text>
           </View>
         ) : (
           <FlatList
-            data={notes}
+            data={cards}
             renderItem={({ item }) => (
-              <List.Item
-                title={item.noteTitle}
-                description={item.noteValue}
-                descriptionNumberOfLines={1}
-                titleStyle={styles.listTitle}
-              />
+                <Fruit title= {item.cardTitle} description={item.cardValue}/>
             )}
             keyExtractor={(item) => item.id.toString()}
           />
@@ -36,11 +32,11 @@ function ViewNotes({ navigation }) {
           style={styles.fab}
           small
           icon="plus"
-          label="Add new note"
+          label="Add new fruit card"
           // add a second parameter object
           onPress={() =>
-            navigation.navigate("AddNotes", {
-              addNote,
+            navigation.navigate("AddCards", {
+              addCard,
             })
           }
         />
@@ -73,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewNotes;
+export default ViewCards;

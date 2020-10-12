@@ -1,19 +1,24 @@
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
-import ViewNotes from '../screens/ViewNotes'
-import AddNotes from '../screens/AddNotes'
+import ViewCards from '../screens/ViewCards'
+import Fruit from '../screens/Fruit'
+
+import AddCards from '../screens/AddCards'
 
 const StackNavigator = createStackNavigator(
     {
-      ViewNotes: {
-        screen: ViewNotes
+      ViewCards: {
+        screen: ViewCards
       },
-      AddNotes: {
-        screen: AddNotes
+      AddCards: {
+        screen: AddCards
+      },
+      Fruit: {
+        screen: Fruit
       }
     },
     {
-      initialRouteName: 'ViewNotes',
+      initialRouteName: 'ViewCards',
       headerMode: 'none',
       mode: 'modal'
     }
