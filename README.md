@@ -5,10 +5,10 @@ I attempted to build a simple react native app. I used Expo to render it on my p
 ### Who did what (if you worked with someone else): 
 I worked on my own
 ### What you learned: 
-I refreshed my memory on how react works, but also got to work with hooks and providers. I understood the meaning of the following terms:
+- I refreshed my memory on how react works, but also got to work with hooks and providers. I understood the meaning of the following terms:
 - View
 - StyleSheet
-I also got to explore the react-native-paper library 
+- I also got to explore the react-native-paper library 
 ### What didn’t work: 
 I had a few issues with git and creating an expo app within the github repo I made and it took me longer than it should have to figure it out
 
