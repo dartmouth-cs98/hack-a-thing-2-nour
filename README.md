@@ -11,6 +11,9 @@ I refreshed my memory on how react works, but also got to work with hooks and pr
 I also got to explore the react-native-paper library 
 ### What didn’t work: 
 I had a few issues with git and creating an expo app within the github repo I made and it took me longer than it should have to figure it out
+
+## links to workshops/resources:
+
 ### https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c
 ### https://callstack.github.io/react-native-paper/card-cover.html
 ### WiCS Skillathon workshop:
